@@ -1,0 +1,10 @@
+name: version-check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  version-check:
+    - uses: reside-eng/verify-git-tag-version@v1
