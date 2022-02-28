@@ -7,4 +7,7 @@ on:
 
 jobs:
   version-check:
-    - uses: reside-eng/verify-git-tag-version@v1
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: reside-eng/verify-git-tag-version@v1
