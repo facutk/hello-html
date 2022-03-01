@@ -1,0 +1,19 @@
+name: tag-version
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  version-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Read package.json
+        uses: tyankatsu0105/read-package-version-actions@v1
+        id: package-version
+
+      - name: Fail if tag exits
+        run: if git rev-parse "${{steps.package-version.outputs.version}}" >/dev/null 2>&1; then exit 1; fi
