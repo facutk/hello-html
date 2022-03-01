@@ -15,8 +15,5 @@ jobs:
         uses: tyankatsu0105/read-package-version-actions@v1
         id: package-version
 
-      - name: Show version number
-        run: echo "Version is ${{ steps.package-version.outputs.version }}"
-
       - name: Fail if tag exits
         run: if git rev-parse "${{steps.package-version.outputs.version}}" >/dev/null 2>&1; then exit 1; fi
