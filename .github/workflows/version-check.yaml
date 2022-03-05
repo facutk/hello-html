@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: kriasoft/check-version@v1
+      - uses: facutk/check-version@v1
 
       # - name: Read package.json
       #   uses: tyankatsu0105/read-package-version-actions@v1
