@@ -1,5 +1,16 @@
 <html>
-<body>
-hello html automated2
-</body>
+  <body>
+    <h2>hello uppercase</h2>
+    <form onsubmit="toUppercase(event)">
+      <input type="text" placeholder="word" id="word">
+      <input type="submit" value="To uppercase">
+    </form>
+    <script>
+      function toUppercase(e) {
+        e.preventDefault()
+        const str = document.querySelector('#word').value
+        fetch(`/gecko/${str}`).then(r => r.text()).then(alert)
+      }
+    </script>
+  </body>
 </html>
