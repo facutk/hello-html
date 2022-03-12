@@ -1,13 +1,13 @@
-name: version-check
+# name: version-check
 
-on:
-  pull_request:
-    branches:
-      - main
+# on:
+#   pull_request:
+#     branches:
+#       - main
 
-jobs:
-  version-check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: facutk/check-version@v1.1
+# jobs:
+#   version-check:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: facutk/check-version@v1.1
