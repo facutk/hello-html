@@ -1,4 +1,7 @@
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
   <body>
     <h2>hello uppercase</h2>
     <form onsubmit="toUppercase(event)">
@@ -9,7 +12,7 @@
       function toUppercase(e) {
         e.preventDefault()
         const str = document.querySelector('#word').value
-        fetch(`/gecko/${str}`).then(r => r.text()).then(alert)
+        fetch(`/gecko/uppercase/${str}`).then(r => r.text()).then(alert)
       }
     </script>
   </body>
